@@ -1,0 +1,296 @@
+{
+    "id": "PAN04-1",
+    "name": {
+        "en": "In Wall Dual relay PAN04-1 (Switch-A)"
+    },
+    "zwave": {
+        "manufacturerId": 316,
+        "productTypeId": 1,
+        "productId": [3, 18],
+        "learnmode": {
+            "image": "/drivers/PAN04-1/assets/learnmode.svg",
+            "instruction": {
+                "en": "Pressing Include button of PAN04 three times within 2 seconds will enter inclusion mode"
+            }
+        },
+        "associationGroups": [1, 2, 3 ],
+        "multiChannelNodes": {
+            "2": {
+                "class": "socket",
+                "capabilities": [
+                    "onoff",
+                    "measure_power",
+                    "meter_power"
+                ],
+                "icon": "/drivers/PAN04-1/assets/icon.svg",
+                "name": {
+                    "en": "In Wall Dual relay PAN04-1 (Switch-B)"
+                }
+            },
+            "3": {
+                "class": "socket",
+                "capabilities": [
+                    "onoff",
+                    "measure_power",
+                    "meter_power"
+                ],
+                "icon": "/drivers/PAN04-1/assets/icon.svg",
+                "name": {
+                    "en": "In Wall Dual relay PAN04-1 (Switch-A & Switch-B)"
+                }
+            }
+        }
+    },
+    "class": "socket",
+    "capabilities": [
+        "onoff",
+        "measure_power",
+        "meter_power"
+    ],
+    "images": {
+        "large": "/drivers/PAN04-1/assets/images/large.png",
+        "small": "/drivers/PAN04-1/assets/images/small.png"
+    },
+    "settings": [
+        {
+            "id": "wattMeterReportPeriod",
+            "zwave": {
+                "index": 1,
+                "size": 2
+            },
+            "type": "number",
+            "label": {
+                "en": "Watt Meter Report Period"
+            },
+            "value": 20,
+            "attr": {
+                "min": 1,
+                "max": 32767
+            }
+        },
+        {
+            "id": "kwhMeterReportPeriod",
+            "zwave": {
+                "index": 2,
+                "size": 2
+            },
+            "type": "number",
+            "label": {
+                "en": "KWH Meter Report Period"
+            },
+            "value": 720,
+            "attr": {
+                "min": 1,
+                "max": 32767
+            }
+        },
+        {
+            "id": "selectedRelay",
+            "zwave": {
+                "index": 3,
+                "size": 1
+            },
+            "type": "dropdown",
+            "label": {
+                "en": "Selected Relay that can be controlled."
+            },
+            "value": "3",
+            "values": [
+                {
+                    "id": "1",
+                    "label": {
+                        "en": "Only relay1"
+                    }
+              },
+                {
+                    "id": "2",
+                    "label": {
+                        "en": "Only relay2"
+                    }
+              },
+                {
+                    "id": "3",
+                    "label": {
+                        "en": "Relay1 and relay2"
+                    }
+              }
+            ]
+        },
+        {
+            "id": "edgePulseModeEdgeToggleMode",
+            "zwave": {
+                "index": 4,
+                "size": 1
+            },
+            "type": "dropdown",
+            "label": {
+                "en": "Edge / Pulse / Edge-Toggle mode."
+            },
+            "value": "1",
+            "values": [
+                {
+                    "id": "1",
+                    "label": {
+                        "en": "Edge mode"
+                    }
+              },
+                {
+                    "id": "2",
+                    "label": {
+                        "en": "Pulse mode"
+                    }
+              },
+                {
+                    "id": "3",
+                    "label": {
+                        "en": "Edge-Toggle mode"
+                    }
+              }
+            ]
+        },
+        {
+            "id": "thresholdCurrentLoadCaution",
+            "zwave": {
+                "index": 5,
+                "size": 2
+            },
+            "type": "number",
+            "label": {
+                "en": "Threshold of current for Load Caution"
+            },
+            "value": 750,
+            "attr": {
+                "min": 1,
+                "max": 750
+            }
+        },
+        {
+            "id": "thresholdKwhLoadCaution",
+            "zwave": {
+                "index": 6,
+                "size": 2
+            },
+            "type": "number",
+            "label": {
+                "en": "Threshold of KWh for Load Caution"
+            },
+            "value": 10000,
+            "attr": {
+                "min": 1,
+                "max": 10000
+            }
+        },
+        {
+            "id": "restoreSwitchStateMode",
+            "zwave": {
+                "index": 7,
+                "size": 1
+            },
+            "type": "dropdown",
+            "label": {
+                "en": "Restore switch state mode."
+            },
+            "value": "1",
+            "values": [
+                {
+                    "id": "0",
+                    "label": {
+                        "en": "Switch Off"
+                    }
+              },
+                {
+                    "id": "1",
+                    "label": {
+                        "en": "Last Switch State"
+                    }
+              },
+                {
+                    "id": "2",
+                    "label": {
+                        "en": "Switch On"
+                    }
+              }
+            ]
+        },
+        {
+            "id": "autoOffTimer",
+            "zwave": {
+                "index": 8,
+                "size": 2
+            },
+            "type": "number",
+            "label": {
+                "en": "Auto off timer."
+            },
+            "value": 0,
+            "attr": {
+                "min": 0,
+                "max": 32767
+            }
+        },
+        {
+            "id": "rfOffCommandMode",
+            "zwave": {
+                "index": 9,
+                "size": 1
+            },
+            "type": "dropdown",
+            "label": {
+                "en": "RF off command mode."
+            },
+            "value": "0",
+            "values": [
+                {
+                    "id": "0",
+                    "label": {
+                        "en": "Switch Off"
+                    }
+              },
+                {
+                    "id": "1",
+                    "label": {
+                        "en": "Ignore"
+                    }
+              },
+                {
+                    "id": "2",
+                    "label": {
+                        "en": "Switch Toggle"
+                    }
+              },
+                {
+                    "id": "3",
+                    "label": {
+                        "en": "Switch On"
+                    }
+              }
+            ]
+        },
+        {
+            "id": "existenceOfEndpoint3",
+            "zwave": {
+                "index": 10,
+                "size": 1
+            },
+            "type": "dropdown",
+            "label": {
+                "en": "Existence of Endpoint3."
+            },
+            "value": "1",
+            "values": [
+                {
+                    "id": "1",
+                    "label": {
+                        "en": "Endpoint3 exist"
+                    }
+              },
+                {
+                    "id": "2",
+                    "label": {
+                        "en": "No Endpoint3"
+                    }
+              }
+            ]
+        }
+    ]
+}

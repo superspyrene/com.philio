@@ -1,0 +1,16 @@
+[
+    {
+        "id": "PSR04_onoff",
+        "title": {
+            "en": "Is !{{on|off}}",
+            "nl": "Is !{{aan|uit}}"
+        },
+        "args": [
+            {
+                "name": "device_data",
+                "type": "device",
+                "filter": "driver_id=PSR04"
+            }
+        ]
+    }
+]

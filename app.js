@@ -1,5 +1,15 @@
-"use strict";
+'use strict';
 
-module.exports.init = function() {
-	Homey.log("athom project --run is running 'com.philio'...");
+const Homey = require('homey');
+
+class PhilioZwave extends Homey.App {
+
+  onInit() {
+
+    this.log('Philio Z-wave app is running...');
+
+  }
+
 }
+
+module.exports = PhilioZwave;

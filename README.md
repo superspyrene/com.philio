@@ -22,10 +22,14 @@ Currently supported languages:
 
 
 #Compatibility
-Homey version >= 1.1.0
+Homey version >= 1.5.3
 
 
 Changelog:  
+
+2.0.0
+* Refactoring and reorganising code
+* Upgrade to Athom SDK v2
 
 0.0.22
 * Added support for Z-wave+ versions of PAN11, PAN04, PAN06

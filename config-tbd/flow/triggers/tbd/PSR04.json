@@ -1,0 +1,70 @@
+[
+    {
+        "id": "PSR04_on",
+        "title": {
+            "en": "Switched on",
+            "nl": "Aangezet"
+        },
+        "args": [
+            {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=PSR04"
+            }
+        ],
+        "tokens": [
+            {
+                "name": "dim",
+                "type": "number",
+                "title": {
+                    "en": "level",
+                    "nl": "niveau"
+                },
+                "example": {
+                    "en": 0.5
+                }
+            }
+        ]
+    },
+    {
+        "id": "PSR04_off",
+        "title": {
+            "en": "Switched off",
+            "nl": "Uitgezet"
+        },
+        "args": [
+            {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=PSR04"
+            }
+        ]
+    },
+    {
+        "id": "PSR04_dim",
+        "title": {
+            "en": "Dim-level changed",
+            "nl": "Dim-niveau veranderd"
+        },
+        "args": [
+            {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=PSR04"
+            }
+        ],
+        "tokens": [
+            {
+                "name": "dim",
+                "type": "number",
+                "title": {
+                    "en": "level",
+                    "nl": "niveau"
+                },
+                "example": {
+                    "en": 0.5
+                }
+            }
+        ]
+    }
+]

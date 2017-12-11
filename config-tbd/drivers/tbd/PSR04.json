@@ -1,0 +1,162 @@
+{
+    "id": "PSR04",
+    "name": {
+        "en": "Smart Color Button PSR04"
+    },
+    "class": "other",
+    "capabilities": [
+        "measure_battery",
+        "show_dim_level"
+    ],
+    "images": {
+        "large": "/drivers/PSR04/assets/images/large.png",
+        "small": "/drivers/PSR04/assets/images/small.png"
+    },
+    "zwave": {
+        "manufacturerId": 316,
+        "productTypeId": 9,
+        "productId": [
+            34
+        ],
+        "learnmode": {
+            "image": "/drivers/PSR04/assets/learnmode.svg",
+            "instruction": {
+                "en": "Turn the knob to Area A (Bottom) and press the button 3 times.",
+                "nl": "Draai de knop naar Zone A (Onder) en druk 3 keer op de knop."
+            }
+        },
+        "associationGroups": [
+            1,
+            2
+        ],
+        "associationGroupsOptions": {
+            "1": {
+                "hint": {
+                    "en": "Battery level and current dim level get reported in here.",
+                    "nl": "Batterij niveau en huidig dim niveau worden hier op gemeld."
+                }
+            },
+            "2": {
+                "hint": {
+                    "en": "Dim level changes will be reported here.",
+                    "nl": "Dim niveau veranderingen worden hier op gemeld."
+                }
+            }
+        }
+    },
+    "mobile": {
+        "components": [
+            {
+                "id": "icon",
+                "capabilities": []
+            },
+            {
+                "id": "battery",
+                "capabilities": [
+                    "measure_battery"
+                ]
+            },
+            {
+                "id": "slider",
+                "capabilities": [
+                    "show_dim_level"
+                ]
+            }
+        ]
+    },
+    "settings": [
+        {
+            "id": 1,
+            "type": "number",
+            "label": {
+                "en": "Dimming Level 'Off' Command",
+                "nl": "Dim level 'Uit' Commando"
+            },
+            "value": 0,
+            "attr": {
+                "min": 0,
+                "max": 99
+            },
+            "hint": {
+                "en": "What dimming level will be send, when sending the 'Off' Command. Range: 0 - 99",
+                "nl": "Welk dim niveau moet worden verzonden bij het 'Uit' Commando. Bereik: 0 - 99"
+            }
+        },
+        {
+            "id": 2,
+            "type": "number",
+            "label": {
+                "en": "Dimming Level 'On' Command",
+                "nl": "Dim level 'Aan' Commando"
+            },
+            "value": 99,
+            "attr": {
+                "min": 1,
+                "max": 99
+            },
+            "hint": {
+                "en": "What dimming level will be send, when sending the 'On' Command. Range: 1 - 99",
+                "nl": "Welk dim niveau moet worden verzonden bij het 'Aan' Commando. Bereik: 1 - 99"
+            }
+        },
+        {
+            "id": 10,
+            "type": "number",
+            "label": {
+                "en": "Battery Report",
+                "nl": "Batterij Verzending"
+            },
+            "value": 12,
+            "attr": {
+                "min": 0,
+                "max": 127
+            },
+            "hint": {
+                "en": "Interval (in hours) for when to send the battery level. Range: 0 (off), 1 - 127",
+                "nl": "Interval (in uur) wanneer het batterij niveau word verzonden. Bereik: 0 (uit), 1 - 127"
+            }
+        },
+        {
+            "id": 251,
+            "type": "dropdown",
+            "label": {
+                "en": "Reporting",
+                "nl": "Verzending"
+            },
+            "value": "0",
+            "hint": {
+                "en": "Determine when the signal will be send.",
+                "nl": "Bepaal wanneer het signaal word verzonden."
+            },
+            "values": [
+                {
+                    "id": "0",
+                    "label": {
+                        "en": "Automatic after rotating.",
+                        "nl": "Automatische no rotatie."
+                    }
+                },
+                {
+                    "id": "1",
+                    "label": {
+                        "en": "After pressing the button.",
+                        "nl": "Met het drukken op de knop."
+                    }
+                }
+            ]
+        },
+        {
+            "id": 252,
+            "type": "checkbox",
+            "label": {
+                "en": "Timer Buzzer",
+                "nl": "Timer Buzzer"
+            },
+            "value": true,
+            "hint": {
+                "en": "Determine if the buzzer will activate with the timer.",
+                "nl": "Bepaal of de buzzer activeert met de timer."
+            }
+        }
+    ]
+}
